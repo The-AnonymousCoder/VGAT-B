@@ -1,0 +1,30 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "hardhat compile",
+    "vupload": "node scripts/upload_vector_map.js",
+    "vupload:sepolia": "HARDHAT_NETWORK=sepolia node scripts/upload_vector_map.js",
+    "vverify": "node scripts/verify_vector_map.js",
+    "vverify:sepolia": "HARDHAT_NETWORK=sepolia node scripts/verify_vector_map.js",
+    "token": "node scripts/setup_web3_token.js",
+    "token:set:jwt": "node scripts/setup_web3_token.js --jwt=$PINATA_JWT",
+    "token:set:keys": "node scripts/setup_web3_token.js --apiKey=$PINATA_API_KEY --apiSecret=$PINATA_API_SECRET"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "hardhat": "^2.26.3"
+  },
+  "dependencies": {
+    "@pinata/sdk": "^2.1.0",
+    "ali-oss": "^6.20.0",
+    "dotenv": "^17.2.2"
+  }
+}
